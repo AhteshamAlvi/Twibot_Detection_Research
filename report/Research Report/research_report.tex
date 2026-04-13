@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for USENIX papers.
+%
+% History:
+%
+% - TEMPLATE for Usenix papers, specifically to meet requirements of
+%   USENIX '05. originally a template for producing IEEE-format
+%   articles using LaTeX. written by Matthew Ward, CS Department,
+%   Worcester Polytechnic Institute. adapted by David Beazley for his
+%   excellent SWIG paper in Proceedings, Tcl 96. turned into a
+%   smartass generic template by De Clarke, with thanks to both the
+%   above pioneers. Use at your own risk. Complaints to /dev/null.
+%   Make it two column with no page numbering, default is 10 point.
+%
+% - Munged by Fred Douglis <douglis@research.att.com> 10/97 to
+%   separate the .sty file from the LaTeX source template, so that
+%   people can more easily include the .sty file into an existing
+%   document. Also changed to more closely follow the style guidelines
+%   as represented by the Word sample file.
+%
+% - Note that since 2010, USENIX does not require endnotes. If you
+%   want foot of page notes, don't include the endnotes package in the
+%   usepackage command, below.
+% - This version uses the latex2e styles, not the very ancient 2.09
+%   stuff.
+%
+% - Updated July 2018: Text block size changed from 6.5" to 7"
+%
+% - Updated Dec 2018 for ATC'19:
+%
+%   * Revised text to pass HotCRP's auto-formatting check, with
+%     hotcrp.settings.submission_form.body_font_size=10pt, and
+%     hotcrp.settings.submission_form.line_height=12pt
+%
+%   * Switched from \endnote-s to \footnote-s to match Usenix's policy.
+%
+%   * \section* => \begin{abstract} ... \end{abstract}
+%
+%   * Make template self-contained in terms of bibtex entires, to allow
+%     this file to be compiled. (And changing refs style to 'plain'.)
+%
+%   * Make template self-contained in terms of figures, to
+%     allow this file to be compiled. 
+%
+%   * Added packages for hyperref, embedding fonts, and improving
+%     appearance.
+%   
+%   * Removed outdated text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{../usenix2019_v3}
+
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{url}
+
+% inlined bib file
+\usepackage{filecontents}
+
+%-------------------------------------------------------------------------------
+\begin{filecontents}{\jobname.bib}
+%-------------------------------------------------------------------------------
+@Article{yang2019arming,
+  author =       {Yang, Kai-Cheng and Varol, Onur and Davis, Clayton A. and Ferrara, Emilio and Flammini, Alessandro and Menczer, Filippo},
+  title =        {Arming the Public with Artificial Intelligence to Counter Social Bots},
+  journal =      {Human Behavior and Emerging Technologies},
+  year =         2019,
+  volume =       {1},
+  number =       {1},
+  pages =        {48--61},
+  note =         {\url{https://doi.org/10.1002/hbe2.115}}
+}
+@Article{zhang2025socialbot,
+  author =       {Zhang, Yuxin and others},
+  title =        {Research on Social Bot Identification Through Behavioral Feature Analysis},
+  journal =      {EAI Endorsed Transactions on Security and Safety},
+  year =         2025,
+  note =         {\url{https://doi.org/10.1371/journal.pone.0324539}}
+}
+@Article{li2022botfinder,
+  author =       {Li, Yifan and Zhang, Yanhong and Liu, Hao and Hu, Xia},
+  title =        {BotFinder: A Novel Framework for Social Bots Detection in Online Social Networks Based on Graph Embedding and Community Detection},
+  journal =      {World Wide Web},
+  year =         2023,
+  note =         {\url{https://doi.org/10.1007/s11280-022-01114-2}}
+}
+
+\end{filecontents}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+
+%don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf Detecting Social Media Bots via Reinforcement Learning}
+
+%for single author (just remove % characters)
+\author{
+{\rm Ahtesham Alvi}\\
+aalvi1@terpmail.umd.edu
+\and
+{\rm Declan Scott}\\
+djscott@terpmail.umd.edu
+\\
+\and
+{\rm Michael Morton}\\
+mmorton4@terpmail.
+umd.edu
+\and
+{\rm Tristan Tang}\\
+ttsang@terpmail.umd.edu
+\\
+\and
+{\rm Yudhiishbala Senthilkumar}\\
+yudhiish@terpmail.umd.edu
+\\
+}
+% copy the following lines to add more authors
+% \and
+% {\rm Name}\\
+%Name Institution
+% end author
+
+\maketitle
+
+%-------------------------------------------------------------------------------
+\section{1}
+%-------------------------------------------------------------------------------
+Fill in Here
+
+\bibliographystyle{plain}
+\bibliography{\jobname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  LocalWords:  endnotes includegraphics fread ptr nobj noindent
+%%  LocalWords:  pdflatex acks

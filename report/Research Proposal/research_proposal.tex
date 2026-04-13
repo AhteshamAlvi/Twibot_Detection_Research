@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for USENIX papers.
+%
+% History:
+%
+% - TEMPLATE for Usenix papers, specifically to meet requirements of
+%   USENIX '05. originally a template for producing IEEE-format
+%   articles using LaTeX. written by Matthew Ward, CS Department,
+%   Worcester Polytechnic Institute. adapted by David Beazley for his
+%   excellent SWIG paper in Proceedings, Tcl 96. turned into a
+%   smartass generic template by De Clarke, with thanks to both the
+%   above pioneers. Use at your own risk. Complaints to /dev/null.
+%   Make it two column with no page numbering, default is 10 point.
+%
+% - Munged by Fred Douglis <douglis@research.att.com> 10/97 to
+%   separate the .sty file from the LaTeX source template, so that
+%   people can more easily include the .sty file into an existing
+%   document. Also changed to more closely follow the style guidelines
+%   as represented by the Word sample file.
+%
+% - Note that since 2010, USENIX does not require endnotes. If you
+%   want foot of page notes, don't include the endnotes package in the
+%   usepackage command, below.
+% - This version uses the latex2e styles, not the very ancient 2.09
+%   stuff.
+%
+% - Updated July 2018: Text block size changed from 6.5" to 7"
+%
+% - Updated Dec 2018 for ATC'19:
+%
+%   * Revised text to pass HotCRP's auto-formatting check, with
+%     hotcrp.settings.submission_form.body_font_size=10pt, and
+%     hotcrp.settings.submission_form.line_height=12pt
+%
+%   * Switched from \endnote-s to \footnote-s to match Usenix's policy.
+%
+%   * \section* => \begin{abstract} ... \end{abstract}
+%
+%   * Make template self-contained in terms of bibtex entires, to allow
+%     this file to be compiled. (And changing refs style to 'plain'.)
+%
+%   * Make template self-contained in terms of figures, to
+%     allow this file to be compiled. 
+%
+%   * Added packages for hyperref, embedding fonts, and improving
+%     appearance.
+%   
+%   * Removed outdated text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{../usenix2019_v3}
+
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{url}
+
+% inlined bib file
+\usepackage{filecontents}
+
+%-------------------------------------------------------------------------------
+\begin{filecontents}{\jobname.bib}
+%-------------------------------------------------------------------------------
+@Article{yang2019arming,
+  author =       {Yang, Kai-Cheng and Varol, Onur and Davis, Clayton A. and Ferrara, Emilio and Flammini, Alessandro and Menczer, Filippo},
+  title =        {Arming the Public with Artificial Intelligence to Counter Social Bots},
+  journal =      {Human Behavior and Emerging Technologies},
+  year =         2019,
+  volume =       {1},
+  number =       {1},
+  pages =        {48--61},
+  note =         {\url{https://doi.org/10.1002/hbe2.115}}
+}
+@Article{zhang2025socialbot,
+  author =       {Zhang, Yuxin and others},
+  title =        {Research on Social Bot Identification Through Behavioral Feature Analysis},
+  journal =      {EAI Endorsed Transactions on Security and Safety},
+  year =         2025,
+  note =         {\url{https://doi.org/10.1371/journal.pone.0324539}}
+}
+@Article{li2022botfinder,
+  author =       {Li, Yifan and Zhang, Yanhong and Liu, Hao and Hu, Xia},
+  title =        {BotFinder: A Novel Framework for Social Bots Detection in Online Social Networks Based on Graph Embedding and Community Detection},
+  journal =      {World Wide Web},
+  year =         2023,
+  note =         {\url{https://doi.org/10.1007/s11280-022-01114-2}}
+}
+
+\end{filecontents}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+
+%don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf Detecting Social Media Bots via Reinforcement Learning\\
+  Project Proposal}
+
+%for single author (just remove % characters)
+\author{
+{\rm Ahtesham Alvi}\\
+aalvi1@terpmail.umd.edu
+\and
+{\rm Declan Scott}\\
+djscott@terpmail.umd.edu
+\\
+\and
+{\rm Michael Morton}\\
+mmorton4@terpmail.
+umd.edu
+\and
+{\rm Tristan Tang}\\
+ttsang@terpmail.umd.edu
+\\
+\and
+{\rm Yudhiishbala Senthilkumar}\\
+yudhiish@terpmail.umd.edu
+\\
+}
+% copy the following lines to add more authors
+% \and
+% {\rm Name}\\
+%Name Institution
+% end author
+
+\maketitle
+
+%-------------------------------------------------------------------------------
+\section{Problem and motivation}
+%-------------------------------------------------------------------------------
+
+\subsection{What are we trying to Solve?}
+        We are looking to understand whether bot detection models that are trained on data from X (formerly Twitter) from 2020 are still effective when applied to accounts on X today. Over time, bot detection evolves alongside the development of bots themselves.
+        \\\\
+        As a result, models that are trained on older data may use features that no longer distinguish bots from human users. That causes the creation of a gap when it comes to the generalization of temporal data. In this gap, a model tends to perform very well and test datasets from the past, but then fails to accurately classify contemporary accounts. Even though he bots reported high accuracy scores on the 2020 datasets, the scores may differ on modern datasets. 
+        \\\\
+        In this project, we analyze this discrepancy to evaluate whether bot detection models that are trained on older data remain accurate when classifying bot accounts today. Instead of focusing only on a single accuracy score for the model, we will also focus on how behavior patterns, language use, and network structures have changed the reported accuracy for bots. 
+        \\\\
+        Detection systems operate in environments that are constantly changing, and automated accounts adapt to platform policies and new detection techniques. In this project, we hope to pinpoint certain strategies modern bots use to avoid detection to provide clear evidence on whether retraining, feature redesign, or more adaptive modeling strategies are necessary to maintain effective bot detection on X today.
+
+\subsection{Why is it important?}
+    In this day and age, bots are widespread on social media platforms, such as X, and they do a good job of mimicking human behavior. As a result, it becomes increasingly difficult for a person to understand whether they are socializing with a real person or with an automated account. This obscureness poses numerous challenges for users, researchers, and platform moderators. Bots are prone to spreading misinformation, amplifying harmful content, manipulating people, changing overall public opinion, and taking online conversations out of context.
+    \\\\
+    If detection models fail to identify new types of bots as they become more advanced, platforms end up being more at risk of allowing malicious activity to go unchecked. This causes people to not use platforms, wastes money of advertisers, and weakens efforts to help maintain safe and authentic communities through the enforcement of guidelines. This research will help us learn how bot detection systems can remain effective ways of preserving online communities by adapting to heir changes.
+
+        
+\subsection{What is the question that this is trying to solve?}
+    The main question that we are looking to solve is as follows: "Have bots on social media platforms evolved in ways that reduce the effectiveness of existing detection methods?" To answer this question, we will focus on the changes in bot behaviors, language patterns, and network interactions since 2020 and compare their accuracy to bots on platforms in 2026.
+
+
+%-------------------------------------------------------------------------------
+\section{Prior Work}
+%-------------------------------------------------------------------------------
+The following papers are relevant to our work as they have tackled similar issues and provide valuable insights.
+
+\subsection{Arming the public with artificial intelligence to counter social bots \cite{yang2019arming}}
+
+This paper discusses the prevalence of social media bots on Twitter as well as the current approaches to combatting them. The authors estimate that around 9-15\% of accounts on Twitter are bots and they provide a classification to distinguish these bots: simple bots, impersonation bots, coordinated botnets, and fake follower bots. Each of these different types of bots pose their own unique detection challenges.
+
+The paper takes a close look at Botometer, a popular bot detection tool on Twitter. Botometer uses the Twitter API and Random Forest classifiers to analyze account features and assign profiles a score indicating the likelihood of automation. The authors also identify current challenges that need to be addressed, such as the difficulty of labeling bot data for ML models and the constant evolution of bots as they adapt to current detection systems.
+
+\subsection{Research on social bot identification through behavioral feature analysis \cite{zhang2025socialbot}}
+
+This paper proposes a new type of bot identification method focused on systemic behavioral feature analysis, a method that the authors claim is often lacking in most modern approaches. The authors construct a set of behavioral indicators that distinguish bot accounts from normal users and apply feature selection techniques to remove redundant features. Using a dataset of over 37,000 social media accounts, they train a Random Forest classifier to identify bot accounts. Their results show that the selected behavioral features significantly improve model performance compared to baseline models.
+
+\subsection{BotFinder: a novel framework for social bots detection in online social networks based on graph embedding and community detection \cite{li2022botfinder}}
+
+The authors propose a bot identification program called BotFinder that aims to target coordinated botnets specifically by representing social networks as graphs. BotFinder then uses machine learning to classify groups of users as individual communities and performs analysis on the community level. The authors evaluate BotFinder on real-world Twitter datasets and report detection accuracies of roughly 95–97\%, outperforming several traditional machine learning classifiers.
+
+%-------------------------------------------------------------------------------
+\section{What do we plan to do?}
+%-------------------------------------------------------------------------------
+We plan to use the Twibot-22 dataset to train a machine learning model aimed at detecting Twitter bots. The Twibot-22 data set is a large dataset containing over 1 million users and 86 million tweets collected throughout 2022. This dataset includes lots of user and tweet meta data. It also provides graphical relationships between different Twitter entities. This comprehensive dataset provides us with several potential features to analyze and train our model off of. 
+\\\\
+Using the Twibot-22 dataset, we will learn the important features, patterns, and relationships that can reliably predict and detect bot accounts/tweets on Twitter. We will also develop a machine learning model to classify these tweets/accounts as being bots or not. Once the model is sufficiently trained, we will analyze its accuracy across the dataset determining which combinations of features provide the best predictive value.
+\\\\
+Finally once our machine learning model is done training, we plan on applying the model on modern day Twitter (X) usage. We will analyze the results to determine how effective a model trained on past data is on modern day bots. We will look at how the patterns and behaviors of bots may have changed over time. We will analyze the different collected features to see their relevance in modern bot detection versus a model trained on 4 year old data. We will conclude this research by determining how bots on social media platforms have evolved over time in relation to the data being input into our machine learning model. 
+
+%-------------------------------------------------------------------------------
+\section{How will we evaulate our solution?}
+%-------------------------------------------------------------------------------
+Our solution will be evaluated using standard machine learning metrics to measure accuracy and reliability like accuracy, precision, recall, and F1-score.. After training the model on the Twibot-22 dataset, we will first evaluate its performance on a validation and test portion of the same dataset. This will allow us to determine how well the model performs on data that follows the same distribution as the training data. 
+\\\\
+After establishing baseline performance on the Twibot-22 dataset, the trained model will then be applied to modern X (Twitter) account data collected from the current platform using X’s native API resources. The goal will be to observe how the model performs when it is applied to newer data that may reflect evolved bot behavior. If the model performs significantly worse on modern data, this would suggest either that bot characteristics have changed over time and that detection models trained on older datasets struggle to adapt to modern environments, or that our bot is simply overfitted. In the case that it isn’t overfitted, however (determined through testing), we can assume it no longer holds up to the modern day.
+\\\\
+We can also analyze feature importance. This will be done to determine which features contribute the most to the classification decisions. By comparing feature importance rankings between the training dataset and modern evaluation results, we can identify which behaviors remain stable over time and which ones lose predictive value. This will highlight how bot strategies may have evolved over the years and which decision features are most valuable. Our overall success for this project will be determined by the ability to quantify the performance gap between historical training data and modern platform behavior, and by identifying which detection features have remained reliable and thus may continue to remain reliable in the coming years.
+
+\bibliographystyle{plain}
+\bibliography{\jobname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  LocalWords:  endnotes includegraphics fread ptr nobj noindent
+%%  LocalWords:  pdflatex acks

@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{li2022botfinder}
+Yifan Li, Yanhong Zhang, Hao Liu, and Xia Hu.
+\newblock Botfinder: A novel framework for social bots detection in online social networks based on graph embedding and community detection.
+\newblock {\em World Wide Web}, 2023.
+\newblock \url{https://doi.org/10.1007/s11280-022-01114-2}.
+
+\bibitem{yang2019arming}
+Kai-Cheng Yang, Onur Varol, Clayton~A. Davis, Emilio Ferrara, Alessandro Flammini, and Filippo Menczer.
+\newblock Arming the public with artificial intelligence to counter social bots.
+\newblock {\em Human Behavior and Emerging Technologies}, 1(1):48--61, 2019.
+\newblock \url{https://doi.org/10.1002/hbe2.115}.
+
+\bibitem{zhang2025socialbot}
+Yuxin Zhang et~al.
+\newblock Research on social bot identification through behavioral feature analysis.
+\newblock {\em EAI Endorsed Transactions on Security and Safety}, 2025.
+\newblock \url{https://doi.org/10.1371/journal.pone.0324539}.
+
+\end{thebibliography}
