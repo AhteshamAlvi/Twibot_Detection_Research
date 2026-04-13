@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex research_proposal"] 1776120415 "research_proposal.aux" "research_proposal.bbl" "research_proposal" 1776120417 0
-  "./research_proposal.bib" 1776120297 1401 9163df7bf127355d1398a778dc27d9f0 ""
+["bibtex research_proposal"] 1776120736 "research_proposal.aux" "research_proposal.bbl" "research_proposal" 1776120737 0
+  "./research_proposal.bib" 1776120734 1401 9163df7bf127355d1398a778dc27d9f0 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "research_proposal.aux" 1776120416 2335 a7378352cee5d8b885c0aab970555d47 "pdflatex"
+  "research_proposal.aux" 1776120737 2335 a7378352cee5d8b885c0aab970555d47 "pdflatex"
   (generated)
   "research_proposal.bbl"
   "research_proposal.blg"
   (rewritten before read)
-["pdflatex"] 1776120415 "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Proposal/research_proposal.tex" "research_proposal.pdf" "research_proposal" 1776120417 0
+["pdflatex"] 1776120736 "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Proposal/research_proposal.tex" "research_proposal.pdf" "research_proposal" 1776120737 0
   "../usenix2019_v3.sty" 1776120271 3795 62775b94e6f3aaf4bda0ce3e06335b5f ""
   "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Proposal/research_proposal.tex" 1776120415 14687 e4039192bc7bb6e39d5e8648c64686a9 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -171,10 +171,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1706892118 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1706892052 7883460 6122142eec1ea79dc39ca5463be6b2c5 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "research_proposal.aux" 1776120416 2335 a7378352cee5d8b885c0aab970555d47 "pdflatex"
-  "research_proposal.bbl" 1776120415 968 b15b6a7121fd9fef06f7205cc97e8ab0 "bibtex research_proposal"
-  "research_proposal.bib" 1776120297 1401 9163df7bf127355d1398a778dc27d9f0 ""
-  "research_proposal.out" 1776120416 3254 b7b10024933872e9523c1d2e55a08636 "pdflatex"
+  "research_proposal.aux" 1776120737 2335 a7378352cee5d8b885c0aab970555d47 "pdflatex"
+  "research_proposal.bbl" 1776120736 968 b15b6a7121fd9fef06f7205cc97e8ab0 "bibtex research_proposal"
+  "research_proposal.bib" 1776120734 1401 9163df7bf127355d1398a778dc27d9f0 ""
+  "research_proposal.out" 1776120737 3254 b7b10024933872e9523c1d2e55a08636 "pdflatex"
   "research_proposal.tex" 1776120415 14687 e4039192bc7bb6e39d5e8648c64686a9 ""
   (generated)
   "research_proposal.aux"
