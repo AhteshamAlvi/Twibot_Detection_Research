@@ -1,0 +1,23 @@
+\subsection{Logistic Regression Baseline}
+
+As a baseline classifier, we implemented a logistic regression model for binary bot detection using account-level profile metadata. The model was trained with mini-batch gradient descent and balanced sample weights to reduce the effect of class imbalance. We used 27 derived features from the processed user tables, including follower and following counts, status volume, account age, verification status, biography indicators, location indicators, and several log-transformed or ratio-based behavioral features. For each dataset, we used a stratified 70/10/20 train/validation/test split.
+
+Table~\ref{tab:logreg-results} summarizes the test-set performance of the logistic regression baseline across the historical datasets. The model performed strongest on the Cresci datasets, especially Cresci-2017, where it achieved 98.26\% accuracy and a ROC-AUC of 0.9952. Performance was lower on TwiBot-20 and lower still on a 100{,}000-row stratified sample from TwiBot-22. This pattern suggests that a simple linear classifier captures older bot behaviors effectively, but its performance degrades on newer datasets where the distinction between bot and human accounts is less linearly separable.
+
+\begin{table}[t]
+\centering
+\caption{Logistic regression baseline results on historical bot-detection datasets.}
+\label{tab:logreg-results}
+\begin{tabular}{lccccc}
+\hline
+Dataset & Accuracy & Precision & Recall & F1 & ROC-AUC \\
+\hline
+Cresci-2015 & 0.8528 & 0.9372 & 0.8620 & 0.8980 & 0.9294 \\
+Cresci-2017 & 0.9826 & 0.9899 & 0.9872 & 0.9885 & 0.9952 \\
+TwiBot-20 & 0.8165 & 0.7588 & 0.9833 & 0.8566 & 0.8493 \\
+TwiBot-22 (sample) & 0.7613 & 0.3344 & 0.7124 & 0.4551 & 0.8190 \\
+\hline
+\end{tabular}
+\end{table}
+
+Feature analysis also revealed that the most influential predictors changed across datasets. In the older Cresci datasets, account age, biography presence, activity volume, and relationship counts played strong roles in classification. In TwiBot-20 and TwiBot-22, verification status, friendship patterns, and profile text characteristics were more prominent. These shifts support the broader project hypothesis that bot behavior evolves over time and that features which are highly predictive in one era may lose predictive strength in another.
