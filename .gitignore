@@ -28,6 +28,7 @@ notebooks/.ipynb_checkpoints/
 # -----------------------------------------------
 # MODEL ARTIFACTS (can get large)
 # -----------------------------------------------
+artifacts/
 *.pkl
 *.joblib
 *.h5
