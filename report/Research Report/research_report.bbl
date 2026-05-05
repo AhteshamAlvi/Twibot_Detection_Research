@@ -1,3 +1,69 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{alazawi2022feature}
+Raad~Ghazi Al-Azawi and Safaa~O. AL-mamory.
+\newblock Feature extractions and selection of bot detection on {Twitter}: A systematic literature review.
+\newblock {\em Inteligencia Artificial}, 25(69):57--86, 2022.
+\newblock \url{https://doi.org/10.4114/intartif.vol25iss69pp57-86}.
+
+\bibitem{bessi2016distort}
+Alessandro Bessi and Emilio Ferrara.
+\newblock Social bots distort the 2016 {U.S.} presidential election online discussion.
+\newblock {\em First Monday}, 21(11), 2016.
+\newblock \url{https://doi.org/10.5210/fm.v21i11.7090}.
+
+\bibitem{cresci2020decade}
+Stefano Cresci.
+\newblock A decade of social bot detection.
+\newblock {\em Communications of the ACM}, 63(10):72--83, 2020.
+\newblock \url{https://doi.org/10.1145/3409116}.
+
+\bibitem{cresci2017paradigm}
+Stefano Cresci, Roberto Di~Pietro, Marinella Petrocchi, Angelo Spognardi, and Maurizio Tesconi.
+\newblock The paradigm-shift of social spambots: Evidence, theories, and tools for the arms race.
+\newblock In {\em Proceedings of the 26th International Conference on World Wide Web Companion (WWW '17 Companion)}, pages 963--972, 2017.
+\newblock \url{https://doi.org/10.1145/3041021.3055135}.
+
+\bibitem{feng2022twibot22}
+Shangbin Feng, Zhaoxuan Tan, Herun Wan, Ningnan Wang, Zilong Chen, Binchi Zhang, Qinghua Zheng, Wenqian Zhang, Zhenyu Lei, Shujie Yang, Xinshun Feng, Qingyue Zhang, Hongrui Wang, Yuhan Liu, Yuyang Bai, Heng Wang, Zijian Cai, Yanbo Wang, Lijing Zheng, Zihan Ma, Jundong Li, and Minnan Luo.
+\newblock {TwiBot-22}: Towards graph-based {Twitter} bot detection.
+\newblock In {\em Proceedings of the 36th Conference on Neural Information Processing Systems (NeurIPS 2022) Datasets and Benchmarks Track}, 2022.
+\newblock \url{https://twibot22.github.io/}.
+
+\bibitem{feng2021twibot20}
+Shangbin Feng, Herun Wan, Ningnan Wang, Jundong Li, and Minnan Luo.
+\newblock {TwiBot-20}: A comprehensive {Twitter} bot detection benchmark.
+\newblock In {\em Proceedings of the 30th ACM International Conference on Information and Knowledge Management (CIKM '21)}, pages 4485--4494, 2021.
+\newblock \url{https://doi.org/10.1145/3459637.3482019}.
+
+\bibitem{ferrara2017french}
+Emilio Ferrara.
+\newblock Disinformation and social bot operations in the run up to the 2017 {French} presidential election.
+\newblock {\em First Monday}, 22(8), 2017.
+\newblock \url{https://doi.org/10.5210/fm.v22i8.8005}.
+
+\bibitem{ferrara2016rise}
+Emilio Ferrara, Onur Varol, Clayton Davis, Filippo Menczer, and Alessandro Flammini.
+\newblock The rise of social bots.
+\newblock {\em Communications of the ACM}, 59(7):96--104, 2016.
+\newblock \url{https://doi.org/10.1145/2818717}.
+
+\bibitem{shao2018spread}
+Chengcheng Shao, Giovanni~Luca Ciampaglia, Onur Varol, Kai-Cheng Yang, Alessandro Flammini, and Filippo Menczer.
+\newblock The spread of low-credibility content by social bots.
+\newblock {\em Nature Communications}, 9:4787, 2018.
+\newblock \url{https://doi.org/10.1038/s41467-018-06930-7}.
+
+\bibitem{yang2022botometer}
+Kai-Cheng Yang, Emilio Ferrara, and Filippo Menczer.
+\newblock Botometer 101: Social bot practicum for computational social scientists.
+\newblock {\em Journal of Computational Social Science}, 5(2):1511--1528, 2022.
+\newblock \url{https://doi.org/10.1007/s42001-022-00177-5}.
+
+\bibitem{yang2019arming}
+Kai-Cheng Yang, Onur Varol, Clayton~A. Davis, Emilio Ferrara, Alessandro Flammini, and Filippo Menczer.
+\newblock Arming the public with artificial intelligence to counter social bots.
+\newblock {\em Human Behavior and Emerging Technologies}, 1(1):48--61, 2019.
+\newblock \url{https://doi.org/10.1002/hbe2.115}.
 
 \end{thebibliography}
