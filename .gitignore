@@ -1,11 +1,8 @@
 # -----------------------------------------------
 # DATA — nothing in data/ goes to GitHub
 # -----------------------------------------------
-data/!pre-processed/.gitkeep
 data/pre-processed/
-data/!processed/.gitkeep
 data/processed/
-data/!raw/.gitkeep
 data/raw/
 
 # -----------------------------------------------
