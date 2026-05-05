@@ -1,9 +1,12 @@
 # -----------------------------------------------
 # DATA — nothing in data/ goes to GitHub
 # -----------------------------------------------
-data/pre-processed/
-data/processed/
-data/raw/
+data/pre-processed/*
+data/processed/*
+data/raw/*
+!pre-processed/.gitkeep
+!processed/.gitkeep
+!raw/.gitkeep
 
 # -----------------------------------------------
 # PYTHON
