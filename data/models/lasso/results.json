@@ -1,0 +1,138 @@
+{
+  "cresci_2015": {
+    "cresci_2015": {
+      "accuracy": 0.9858623939679547,
+      "auc": 0.9983466270238333,
+      "n_features": 103,
+      "n_train": 4240,
+      "n_test": 1061,
+      "scope": "within-dataset"
+    },
+    "cresci_2017": {
+      "accuracy": 0.40499721603563477,
+      "auc": 0.25391605336143896,
+      "n_features": 32,
+      "n_train": 5301,
+      "n_test": 14368,
+      "scope": "cross-era"
+    },
+    "twibot_2020": {
+      "accuracy": 0.5526805344156942,
+      "auc": 0.6777719695479644,
+      "n_features": 31,
+      "n_train": 5301,
+      "n_test": 11826,
+      "scope": "cross-era"
+    },
+    "twibot_2022": {
+      "accuracy": 0.670105,
+      "auc": 0.5224461082949489,
+      "n_features": 33,
+      "n_train": 5301,
+      "n_test": 1000000,
+      "scope": "cross-era"
+    }
+  },
+  "cresci_2017": {
+    "cresci_2015": {
+      "accuracy": 0.6889266176193171,
+      "auc": 0.6356930954063416,
+      "n_features": 32,
+      "n_train": 14368,
+      "n_test": 5301,
+      "scope": "cross-era"
+    },
+    "cresci_2017": {
+      "accuracy": 0.954070981210856,
+      "auc": 0.9906293230674754,
+      "n_features": 103,
+      "n_train": 11494,
+      "n_test": 2874,
+      "scope": "within-dataset"
+    },
+    "twibot_2020": {
+      "accuracy": 0.5466768138001015,
+      "auc": 0.3180779684624327,
+      "n_features": 32,
+      "n_train": 14368,
+      "n_test": 11826,
+      "scope": "cross-era"
+    },
+    "twibot_2022": {
+      "accuracy": 0.815697,
+      "auc": 0.4833636684460264,
+      "n_features": 33,
+      "n_train": 14368,
+      "n_test": 1000000,
+      "scope": "cross-era"
+    }
+  },
+  "twibot_2020": {
+    "cresci_2015": {
+      "accuracy": 0.2724014336917563,
+      "auc": 0.5776690912131093,
+      "n_features": 31,
+      "n_train": 11826,
+      "n_test": 5301,
+      "scope": "cross-era"
+    },
+    "cresci_2017": {
+      "accuracy": 0.30185133630289535,
+      "auc": 0.7564756798622281,
+      "n_features": 32,
+      "n_train": 11826,
+      "n_test": 14368,
+      "scope": "cross-era"
+    },
+    "twibot_2020": {
+      "accuracy": 0.8229078613693999,
+      "auc": 0.8863121025379652,
+      "n_features": 107,
+      "n_train": 9460,
+      "n_test": 2366,
+      "scope": "within-dataset"
+    },
+    "twibot_2022": {
+      "accuracy": 0.165153,
+      "auc": 0.4939924193178586,
+      "n_features": 34,
+      "n_train": 11826,
+      "n_test": 1000000,
+      "scope": "cross-era"
+    }
+  },
+  "twibot_2022": {
+    "cresci_2015": {
+      "accuracy": 0.5255612148651198,
+      "auc": 0.32634276772417514,
+      "n_features": 33,
+      "n_train": 1000000,
+      "n_test": 5301,
+      "scope": "cross-era"
+    },
+    "cresci_2017": {
+      "accuracy": 0.8028257238307349,
+      "auc": 0.8270305394348576,
+      "n_features": 33,
+      "n_train": 1000000,
+      "n_test": 14368,
+      "scope": "cross-era"
+    },
+    "twibot_2020": {
+      "accuracy": 0.5970742431929646,
+      "auc": 0.7720745423925218,
+      "n_features": 34,
+      "n_train": 1000000,
+      "n_test": 11826,
+      "scope": "cross-era"
+    },
+    "twibot_2022": {
+      "accuracy": 0.76454,
+      "auc": 0.8355745574550519,
+      "n_features": 107,
+      "n_train": 800000,
+      "n_test": 200000,
+      "scope": "within-dataset"
+    }
+  }
+}

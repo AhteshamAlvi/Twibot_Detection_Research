@@ -1,7 +1,9 @@
 # -----------------------------------------------
 # DATA — nothing in data/ goes to GitHub
 # -----------------------------------------------
-data/
+data/pre-processed/
+data/processed/
+data/raw/
 
 # -----------------------------------------------
 # PYTHON
