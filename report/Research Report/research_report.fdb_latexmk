@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex research_report"] 1778036922 "research_report.aux" "research_report.bbl" "research_report" 1778036924 0
+["bibtex research_report"] 1778064976 "research_report.aux" "research_report.bbl" "research_report" 1778065036 0
   "./research_report.bib" 1778030997 5879 60ec09011369211100cb4084e1a60f32 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "research_report.aux" 1778036924 8952 2df89e25f76516db29a7e5d1547fb117 "pdflatex"
+  "research_report.aux" 1778065036 8952 d6b7bc135ba93a188e5deced59f25714 "pdflatex"
   (generated)
   "research_report.bbl"
   "research_report.blg"
   (rewritten before read)
-["pdflatex"] 1778036922 "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Report/research_report.tex" "research_report.pdf" "research_report" 1778036924 0
+["pdflatex"] 1778065033 "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Report/research_report.tex" "research_report.pdf" "research_report" 1778065036 0
   "../figures//01_eda__label_balance.png" 1777946792 65099 c1db8896bc6e065f9bb5e03c162e1f83 ""
   "../figures//04_viz__compare__auc_by_model_and_pair.png" 1777948100 90215 b57e2f0808f58f081c6dd54010aab4a2 ""
   "../figures//04_viz__compare__best_model_per_pair.png" 1777948100 69254 e7bf1ce5574b64e7b7c994c9ad2c4679 ""
@@ -26,7 +26,7 @@
   "../figures//Linear-AUC.png" 1778025515 111422 2f1154947e33a078c72aaa36036a55b3 ""
   "../figures//tree-auc.png" 1778025515 77615 af745a0d3d6d6f3baaf8c93c011b5155 ""
   "../usenix2019_v3.sty" 1777950519 3795 62775b94e6f3aaf4bda0ce3e06335b5f ""
-  "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Report/research_report.tex" 1778036919 40406 41f3c8f5a69860d5d3870ec45acdfa2c ""
+  "/Users/ahteshamalvi/Files/CMSC/CMSC396H/Twibot_Detection_Research/report/Research Report/research_report.tex" 1778065033 40425 8d13b077d9fdf04e55f7ee28051d089e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -212,11 +212,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1706892118 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1706892052 7883460 6122142eec1ea79dc39ca5463be6b2c5 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "research_report.aux" 1778036924 8952 2df89e25f76516db29a7e5d1547fb117 "pdflatex"
-  "research_report.bbl" 1778036922 3643 b43446fc559253eab3961625ea76344f "bibtex research_report"
+  "research_report.aux" 1778065036 8952 d6b7bc135ba93a188e5deced59f25714 "pdflatex"
+  "research_report.bbl" 1778064977 3643 b43446fc559253eab3961625ea76344f "bibtex research_report"
   "research_report.bib" 1778030997 5879 60ec09011369211100cb4084e1a60f32 ""
-  "research_report.out" 1778036924 1546 1e2902a6faa97eb2ae636b42e443d474 "pdflatex"
-  "research_report.tex" 1778036919 40406 41f3c8f5a69860d5d3870ec45acdfa2c ""
+  "research_report.out" 1778065036 1546 1e2902a6faa97eb2ae636b42e443d474 "pdflatex"
+  "research_report.tex" 1778065033 40425 8d13b077d9fdf04e55f7ee28051d089e ""
   (generated)
   "research_report.aux"
   "research_report.log"
