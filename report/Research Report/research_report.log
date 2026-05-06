@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  4 MAY 2026 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.2)  5 MAY 2026 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -478,7 +478,15 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count294
  (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+))) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen198
+\pgfarrowlength=\dimen199
+\pgfarrowwidth=\dimen256
+\pgfarrowlinewidth=\dimen257
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip52
 
@@ -488,10 +496,10 @@ Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks35
-\ex@=\dimen198
+\ex@=\dimen258
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen199
+\pmbraise@=\dimen259
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
@@ -512,7 +520,7 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen256
+\big@size=\dimen260
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \macc@depth=\count300
@@ -530,18 +538,46 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \column@=\count305
 \maxfields@=\count306
 \andhelp@=\toks37
-\eqnshift@=\dimen257
-\alignsep@=\dimen258
-\tagshift@=\dimen259
-\tagwidth@=\dimen260
-\totwidth@=\dimen261
-\lineht@=\dimen262
+\eqnshift@=\dimen261
+\alignsep@=\dimen262
+\tagshift@=\dimen263
+\tagwidth@=\dimen264
+\totwidth@=\dimen265
+\lineht@=\dimen266
 \@envbody=\toks38
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen267
+\lightrulewidth=\dimen268
+\cmidrulewidth=\dimen269
+\belowrulesep=\dimen270
+\belowbottomsep=\dimen271
+\aboverulesep=\dimen272
+\abovetopsep=\dimen273
+\cmidrulesep=\dimen274
+\cmidrulekern=\dimen275
+\defaultaddspace=\dimen276
+\@cmidla=\count307
+\@cmidlb=\count308
+\@aboverulesep=\dimen277
+\@belowrulesep=\dimen278
+\@thisruleclass=\count309
+\@lastruleclass=\count310
+\@thisrulewidth=\dimen279
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count311
+\float@exts=\toks40
+\float@box=\box65
+\@float@everytoks=\toks41
+\@floatcapt=\box66
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2019/09/20 v1.5 Create an external file from within a LaTeX document
 
@@ -557,46 +593,46 @@ LaTeX Info: File `research_report.bib' already exists on the system.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count307
-\l__pdf_internal_box=\box65
+\l__color_backend_stack_int=\count312
+\l__pdf_internal_box=\box67
 ) (./research_report.aux)
 \openout1 = `research_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 185.
-LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line 185.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 207.
+LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line 207.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Info: Redefining \microtypecontext on input line 185.
-Package microtype Info: Applying patch `item' on input line 185.
-Package microtype Info: Applying patch `toc' on input line 185.
-Package microtype Info: Applying patch `eqnum' on input line 185.
-Package microtype Info: Applying patch `footnote' on input line 185.
-Package microtype Info: Applying patch `verbatim' on input line 185.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Info: Redefining \microtypecontext on input line 207.
+Package microtype Info: Applying patch `item' on input line 207.
+Package microtype Info: Applying patch `toc' on input line 207.
+Package microtype Info: Applying patch `eqnum' on input line 207.
+Package microtype Info: Applying patch `footnote' on input line 207.
+Package microtype Info: Applying patch `verbatim' on input line 207.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 185.
+LaTeX Info: Redefining \showhyphens on input line 207.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: Adjustment of interword spacing enabled.
 Package microtype Info: Using default spacing set `alltext-nott'.
@@ -613,29 +649,29 @@ Package microtype Warning: \nonfrenchspacing is active. Adjustment of
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen263
-\scratchbox=\box66
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen264
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count313
+\scratchdimen=\dimen280
+\scratchbox=\box68
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen281
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 185.
+Package hyperref Info: Link coloring ON on input line 207.
  (./research_report.out) (./research_report.out)
 \@outlinefile=\write4
 \openout4 = `research_report.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line 221.
+LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line 242.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
@@ -643,65 +679,261 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ptmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line 221.
+LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line 242.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+psycm on input line 221.
+LaTeX Font Info:    Trying to load font information for OMX+psycm on input line 242.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 242.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 242.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 243.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 242.
+ [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 282.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 282.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 282.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 288.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 288.
+<../figures//01_eda__label_balance.png, id=103, 642.4803pt x 353.4003pt>
+File: ../figures//01_eda__label_balance.png Graphic file (type png)
+<use ../figures//01_eda__label_balance.png>
+Package pdftex.def Info: ../figures//01_eda__label_balance.png  used on input line 304.
+(pdftex.def)             Requested size: 241.02039pt x 132.5733pt.
+<../figures//04_viz__dataset__feature_availability.png, id=106, 904.0977pt x 424.9476pt>
+File: ../figures//04_viz__dataset__feature_availability.png Graphic file (type png)
+<use ../figures//04_viz__dataset__feature_availability.png>
+Package pdftex.def Info: ../figures//04_viz__dataset__feature_availability.png  used on input line 313.
+(pdftex.def)             Requested size: 480.59395pt x 225.889pt.
+<../figures//04_viz__graph__degree_distribution_cresci_2015.png, id=108, 425.6703pt x 278.2395pt>
+File: ../figures//04_viz__graph__degree_distribution_cresci_2015.png Graphic file (type png)
+<use ../figures//04_viz__graph__degree_distribution_cresci_2015.png>
+Package pdftex.def Info: ../figures//04_viz__graph__degree_distribution_cresci_2015.png  used on input line 325.
+(pdftex.def)             Requested size: 232.71278pt x 152.11514pt.
+<../figures//04_viz__graph__degree_distribution_cresci_2017.png, id=109, 425.30894pt x 278.2395pt>
+File: ../figures//04_viz__graph__degree_distribution_cresci_2017.png Graphic file (type png)
+<use ../figures//04_viz__graph__degree_distribution_cresci_2017.png>
+Package pdftex.def Info: ../figures//04_viz__graph__degree_distribution_cresci_2017.png  used on input line 326.
+(pdftex.def)             Requested size: 232.71278pt x 152.24251pt.
+<../figures//04_viz__graph__degree_distribution_twibot_2020.png, id=110, 425.30894pt x 278.2395pt>
+File: ../figures//04_viz__graph__degree_distribution_twibot_2020.png Graphic file (type png)
+<use ../figures//04_viz__graph__degree_distribution_twibot_2020.png>
+Package pdftex.def Info: ../figures//04_viz__graph__degree_distribution_twibot_2020.png  used on input line 327.
+(pdftex.def)             Requested size: 232.71278pt x 152.24251pt.
+<../figures//04_viz__graph__degree_distribution_twibot_2022.png, id=111, 425.6703pt x 278.2395pt>
+File: ../figures//04_viz__graph__degree_distribution_twibot_2022.png Graphic file (type png)
+<use ../figures//04_viz__graph__degree_distribution_twibot_2022.png>
+Package pdftex.def Info: ../figures//04_viz__graph__degree_distribution_twibot_2022.png  used on input line 328.
+(pdftex.def)             Requested size: 232.71278pt x 152.11514pt.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 335.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [3
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.344 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.344 
+       <../figures//01_eda__label_balance.png>]
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 386.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-<../figures//04_viz__story__bots_over_time_logreg.png, id=53, 424.9476pt x 281.1303pt>
-File: ../figures//04_viz__story__bots_over_time_logreg.png Graphic file (type png)
-<use ../figures//04_viz__story__bots_over_time_logreg.png>
-Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_logreg.png  used on input line 304.
-(pdftex.def)             Requested size: 241.02039pt x 159.45233pt.
- (./research_report.bbl
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 386.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 386.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 386.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 386.
+<../figures//04_viz__compare__auc_by_model_and_pair.png, id=125, 428.92245pt x 714.0276pt>
+File: ../figures//04_viz__compare__auc_by_model_and_pair.png Graphic file (type png)
+<use ../figures//04_viz__compare__auc_by_model_and_pair.png>
+Package pdftex.def Info: ../figures//04_viz__compare__auc_by_model_and_pair.png  used on input line 391.
+(pdftex.def)             Requested size: 241.02039pt x 401.23642pt.
+<../figures//04_viz__compare__best_model_per_pair.png, id=126, 411.57765pt x 362.0727pt>
+File: ../figures//04_viz__compare__best_model_per_pair.png Graphic file (type png)
+<use ../figures//04_viz__compare__best_model_per_pair.png>
+Package pdftex.def Info: ../figures//04_viz__compare__best_model_per_pair.png  used on input line 400.
+(pdftex.def)             Requested size: 241.02039pt x 212.03542pt.
+<../figures//04_viz__compare__mean_auc_by_model.png, id=128, 426.393pt x 280.76895pt>
+File: ../figures//04_viz__compare__mean_auc_by_model.png Graphic file (type png)
+<use ../figures//04_viz__compare__mean_auc_by_model.png>
+Package pdftex.def Info: ../figures//04_viz__compare__mean_auc_by_model.png  used on input line 410.
+(pdftex.def)             Requested size: 241.02039pt x 158.7033pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.423 
+      {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../figures//04_viz__dataset__feature_availability.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.429 \section
+              {Limitations}\label{sec:limitations}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.429 \section
+              {Limitations}\label{sec:limitations} <../figures//04_viz__graph__degree_distribution_cresci_2015.png> <../figures//04_viz__graph__degree_distribution_cresci_2017.png> <../figures//04_viz__graph__degree_distribution_twibot_2020.png> <../figures//04_viz__graph__degree_distribution_twibot_2022.png>] [6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.443 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.443 
+       <../figures//04_viz__compare__auc_by_model_and_pair.png> <../figures//04_viz__compare__best_model_per_pair.png>] (./research_report.bbl
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
- [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
-
- <../figures//04_viz__story__bots_over_time_logreg.png>]
-Underfull \hbox (badness 1253) in paragraph at lines 28--32
+Underfull \hbox (badness 1253) in paragraph at lines 27--31
 \T1/ptm/m/n/10 (+20) Feng, Qingyue Zhang, Hon-grui Wang, Yuhan Liu,
  []
 
-) [2] (./research_report.aux)
+) [7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.448 \clearpage
+                 <../figures//04_viz__compare__mean_auc_by_model.png>]
+<../figures//04_viz__story__bots_over_time_logreg.png, id=189, 424.9476pt x 281.1303pt>
+File: ../figures//04_viz__story__bots_over_time_logreg.png Graphic file (type png)
+<use ../figures//04_viz__story__bots_over_time_logreg.png>
+Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_logreg.png  used on input line 460.
+(pdftex.def)             Requested size: 237.7689pt x 157.2989pt.
+<../figures//04_viz__story__bots_over_time_rf.png, id=190, 424.9476pt x 281.1303pt>
+File: ../figures//04_viz__story__bots_over_time_rf.png Graphic file (type png)
+<use ../figures//04_viz__story__bots_over_time_rf.png>
+Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_rf.png  used on input line 461.
+(pdftex.def)             Requested size: 237.7689pt x 157.2989pt.
+<../figures//04_viz__story__bots_over_time_ridge.png, id=191, 424.9476pt x 281.1303pt>
+File: ../figures//04_viz__story__bots_over_time_ridge.png Graphic file (type png)
+<use ../figures//04_viz__story__bots_over_time_ridge.png>
+Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_ridge.png  used on input line 462.
+(pdftex.def)             Requested size: 237.7689pt x 157.2989pt.
+<../figures//04_viz__story__bots_over_time_lasso.png, id=192, 424.9476pt x 281.1303pt>
+File: ../figures//04_viz__story__bots_over_time_lasso.png Graphic file (type png)
+<use ../figures//04_viz__story__bots_over_time_lasso.png>
+Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_lasso.png  used on input line 463.
+(pdftex.def)             Requested size: 237.7689pt x 157.2989pt.
+<../figures//04_viz__story__bots_over_time_xgb.png, id=193, 424.9476pt x 281.1303pt>
+File: ../figures//04_viz__story__bots_over_time_xgb.png Graphic file (type png)
+<use ../figures//04_viz__story__bots_over_time_xgb.png>
+Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_xgb.png  used on input line 464.
+(pdftex.def)             Requested size: 237.7689pt x 157.2989pt.
+<../figures//04_viz__story__bots_over_time_svm.png, id=194, 424.9476pt x 281.1303pt>
+File: ../figures//04_viz__story__bots_over_time_svm.png Graphic file (type png)
+<use ../figures//04_viz__story__bots_over_time_svm.png>
+Package pdftex.def Info: ../figures//04_viz__story__bots_over_time_svm.png  used on input line 465.
+(pdftex.def)             Requested size: 237.7689pt x 157.2989pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.466   \caption
+                {%
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.468   }
+         
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.468   }
+         
+<../figures//tree-auc.png, id=197, 1081.03876pt x 500.87125pt>
+File: ../figures//tree-auc.png Graphic file (type png)
+<use ../figures//tree-auc.png>
+Package pdftex.def Info: ../figures//tree-auc.png  used on input line 481.
+(pdftex.def)             Requested size: 354.12144pt x 164.07283pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.482   \caption
+                {AUC matrices for tree-based models.}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.482 ...tion{AUC matrices for tree-based models.}
+                                                  
+Underfull \vbox (badness 7273) has occurred while \output is active []
+
+ [8
+
+
+ <../figures//04_viz__story__bots_over_time_logreg.png> <../figures//04_viz__story__bots_over_time_rf.png> <../figures//04_viz__story__bots_over_time_ridge.png> <../figures//04_viz__story__bots_over_time_lasso.png> <../figures//04_viz__story__bots_over_time_xgb.png> <../figures//04_viz__story__bots_over_time_svm.png>]
+<../figures//Linear-AUC.png, id=208, 900.36375pt x 801.99625pt>
+File: ../figures//Linear-AUC.png Graphic file (type png)
+<use ../figures//Linear-AUC.png>
+Package pdftex.def Info: ../figures//Linear-AUC.png  used on input line 488.
+(pdftex.def)             Requested size: 354.12144pt x 315.4328pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.489   \caption
+                {AUC matrices for linear models.}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.489   \caption{AUC matrices for linear models.}
+                                                  [9 <../figures//tree-auc.png> <../figures//Linear-AUC.png>] (./research_report.aux)
 Package rerunfilecheck Info: File `research_report.out' has not changed.
-(rerunfilecheck)             Checksum: 5678086E29149B4F28FD292A2596D190;979.
+(rerunfilecheck)             Checksum: 1E2902A6FAA97EB2AE636B42E443D474;1546.
  ) 
 Here is how much of TeX's memory you used:
- 22777 strings out of 476025
- 424995 string characters out of 5790018
- 1866388 words of memory out of 5000000
- 42629 multiletter control sequences out of 15000+600000
- 558455 words of font info for 190 fonts, out of 8000000 for 9000
+ 23851 strings out of 476025
+ 451458 string characters out of 5790018
+ 1877388 words of memory out of 5000000
+ 43533 multiletter control sequences out of 15000+600000
+ 581520 words of font info for 281 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,9n,104p,1103b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on research_report.pdf (2 pages, 158968 bytes).
+ 102i,9n,104p,1837b,834s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on research_report.pdf (9 pages, 1315600 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 61018 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 267 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 75474 words of extra memory for PDF output out of 89155 (max. 10000000)
 

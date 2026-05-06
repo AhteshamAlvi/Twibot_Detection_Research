@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{alazawi2022feature}
-Raad~Ghazi Al-Azawi and Safaa~O. AL-mamory.
-\newblock Feature extractions and selection of bot detection on {Twitter}: A systematic literature review.
-\newblock {\em Inteligencia Artificial}, 25(69):57--86, 2022.
-\newblock \url{https://doi.org/10.4114/intartif.vol25iss69pp57-86}.
-
 \bibitem{bessi2016distort}
 Alessandro Bessi and Emilio Ferrara.
 \newblock Social bots distort the 2016 {U.S.} presidential election online discussion.
@@ -23,6 +17,11 @@ Stefano Cresci, Roberto Di~Pietro, Marinella Petrocchi, Angelo Spognardi, and Ma
 \newblock The paradigm-shift of social spambots: Evidence, theories, and tools for the arms race.
 \newblock In {\em Proceedings of the 26th International Conference on World Wide Web Companion (WWW '17 Companion)}, pages 963--972, 2017.
 \newblock \url{https://doi.org/10.1145/3041021.3055135}.
+
+\bibitem{davoudi2020health}
+Anahita Davoudi, Ari~Z. Klein, Abeed Sarker, and Graciela Gonzalez-Hernandez.
+\newblock Towards automatic bot detection in {Twitter} for health-related tasks.
+\newblock {\em AMIA Joint Summits on Translational Science Proceedings}, 2020:136--144, 2020.
 
 \bibitem{feng2022twibot22}
 Shangbin Feng, Zhaoxuan Tan, Herun Wan, Ningnan Wang, Zilong Chen, Binchi Zhang, Qinghua Zheng, Wenqian Zhang, Zhenyu Lei, Shujie Yang, Xinshun Feng, Qingyue Zhang, Hongrui Wang, Yuhan Liu, Yuyang Bai, Heng Wang, Zijian Cai, Yanbo Wang, Lijing Zheng, Zihan Ma, Jundong Li, and Minnan Luo.
@@ -54,16 +53,16 @@ Chengcheng Shao, Giovanni~Luca Ciampaglia, Onur Varol, Kai-Cheng Yang, Alessandr
 \newblock {\em Nature Communications}, 9:4787, 2018.
 \newblock \url{https://doi.org/10.1038/s41467-018-06930-7}.
 
+\bibitem{sheetal2025comprehensive}
+Sheetal and Amandeep Kaur.
+\newblock A comprehensive study of bot detection in {Twitter}: Evolution, comparisons, and challenges.
+\newblock In {\em Proceedings of the 2025 International Conference on Electronics, AI and Computing (EAIC)}. IEEE, 2025.
+\newblock \url{https://doi.org/10.1109/EAIC66483.2025.11101394}.
+
 \bibitem{yang2022botometer}
 Kai-Cheng Yang, Emilio Ferrara, and Filippo Menczer.
 \newblock Botometer 101: Social bot practicum for computational social scientists.
 \newblock {\em Journal of Computational Social Science}, 5(2):1511--1528, 2022.
 \newblock \url{https://doi.org/10.1007/s42001-022-00177-5}.
-
-\bibitem{yang2019arming}
-Kai-Cheng Yang, Onur Varol, Clayton~A. Davis, Emilio Ferrara, Alessandro Flammini, and Filippo Menczer.
-\newblock Arming the public with artificial intelligence to counter social bots.
-\newblock {\em Human Behavior and Emerging Technologies}, 1(1):48--61, 2019.
-\newblock \url{https://doi.org/10.1002/hbe2.115}.
 
 \end{thebibliography}

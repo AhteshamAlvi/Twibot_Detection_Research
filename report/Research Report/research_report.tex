@@ -53,8 +53,12 @@
 
 % to be able to draw some self-contained figs
 \usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
 \usepackage{amsmath}
 \usepackage{url}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{placeins}
 
 % Figures live in ../figures/ (project-level report/figures/). graphicspath
 % lets us reference them by bare filename — \includegraphics{04_viz__...}
@@ -179,6 +183,24 @@
   note =         {\url{https://doi.org/10.4114/intartif.vol25iss69pp57-86}}
 }
 
+@InProceedings{sheetal2025comprehensive,
+  author =       {Sheetal and Kaur, Amandeep},
+  title =        {A Comprehensive Study of Bot Detection in {Twitter}: Evolution, Comparisons, and Challenges},
+  booktitle =    {Proceedings of the 2025 International Conference on Electronics, AI and Computing (EAIC)},
+  year =         2025,
+  publisher =    {IEEE},
+  note =         {\url{https://doi.org/10.1109/EAIC66483.2025.11101394}}
+}
+
+@Article{davoudi2020health,
+  author =       {Davoudi, Anahita and Klein, Ari Z. and Sarker, Abeed and Gonzalez-Hernandez, Graciela},
+  title =        {Towards Automatic Bot Detection in {Twitter} for Health-Related Tasks},
+  journal =      {AMIA Joint Summits on Translational Science Proceedings},
+  year =         2020,
+  volume =       {2020},
+  pages =        {136--144}
+}
+
 \end{filecontents}
 
 %-------------------------------------------------------------------------------
@@ -201,8 +223,7 @@ djscott@terpmail.umd.edu
 \\
 \and
 {\rm Michael Morton}\\
-mmorton4@terpmail.
-umd.edu
+mmorton4@terpmail.umd.edu
 \and
 {\rm Tristan Tang}\\
 ttsang@terpmail.umd.edu
@@ -223,122 +244,259 @@ yudhiish@terpmail.umd.edu
 %-------------------------------------------------------------------------------
 \begin{abstract}
 %-------------------------------------------------------------------------------
-% TODO: 150-250 words. State the problem (cross-era bot detection),
-% the gap (no published study trains on one era and evaluates on the
-% next), the approach (canonical feature pipeline + pairwise model
-% schema + cross-era evaluation matrix), and the headline finding.
-\textit{Abstract goes here.}
+This paper analyzes the performance of machine learning models to identify social media bots on Twitter (x.com) over time. To answer this question, this paper trains several machine learning models such as logistic regression, ridge regression, lasso regression, random forest, XGBoost, and a linear support vector machine. To train and test these models, this paper employs several state of the art Twitter user and bot datasets: Cresci-15 (2015), Cresci-17 (2017), Twibot-2020, and Twibot-2022. Each of these datasets include several million datapoints users and bots along with their tweets. These models are then trained in a pairwise process. In which, models are trained on one dataset and tested on another dataset. This is done for all pairs of datasets allowing a comprehensive analysis of social media bot detection with general machine learning algorithms between different time periods. After the experiments were conducted a couple general trends were observed. These models were able to obtain a moderate AUC score. However, model trends downward as the datasets get further apart in time. In general models performed worst when they were trained on older data and tested on newer data. This suggests that although detection of social media bots is possible the behavior of social media bots changes over time. It may also suggest that social media bots are becoming more sophisticated and harder to detect. This means models may have to constantly adapt to new behaviors of bots and collect new data to maintain high levels of performance. 
 \end{abstract}
 
 %-------------------------------------------------------------------------------
 \section{Introduction}\label{sec:intro}
 %-------------------------------------------------------------------------------
-% TODO: motivation, problem statement, and a short roadmap of the paper.
-% Should end with an explicit list of contributions.
-\textit{Introduction goes here.}
+Social media platforms are already a central component of people's social media practices in political discourse, news diffusion, and citizen mobilization. As open platforms for interactions, information sharing, and mobilization that scale in ways that conventional media cannot, their ease of interactivity also makes them very susceptible to manipulation by machines. Social bots, as accounts that are controlled programmatically, in full or in part, to mimic human behavior, and amplification of a specific message or interaction at scale, are a pervasive example~\cite{ferrara2016rise}. There are obvious benefits of automation and a range of harmless uses of automated accounts, such as providing routine updates or services to users. Malicious bots can disseminate spam, artificially amplify messages by artificially generating user interactions, promote specific content while demoting others, and falsely appear to indicate that certain sentiments are widespread. The task of bot detection is thus not a technical moderation task but a broader research challenge for the credibility of online public discourse, social media platform governance, and data used for social media research. 
 
-\paragraph{Contributions.}
-% TODO: replace with real bullet list once the experiments settle.
-\begin{itemize}
-  \item \textit{Contribution 1.}
-  \item \textit{Contribution 2.}
-  \item \textit{Contribution 3.}
-\end{itemize}
+The broader social impact of bot activity has been well documented. The 2016 US Presidential election saw bot activity amplify partisan content and distort political discussion~\cite{bessi2016distort}, followed by bot-supported disinformation campaigns during the 2017 French presidential election aimed at influencing public attention and participation~\cite{ferrara2017french}. This issue, however, extends far beyond elections. The amplification of low-credibility information by bots at the early stage of information dissemination means that misleading information has a window of opportunity to spread before corrections can be effectively deployed~\cite{shao2018spread}. The confluence of evidence points to a dire need for social media bot detection not only for its technical challenges, but for its connection to integrity in public discourse and information flow on the internet. 
+
+It has become increasingly difficult to detect social bots over time as technology improves. Initial social bots used simple automated functions and exhibited distinct posting patterns and other obvious characteristics. However, recent studies have shown that newer generations of bots aim to simulate the behaviors and attitudes of human users more closely, making them difficult to detect for both humans and machine learning systems~\cite{cresci2017paradigm}. The difficulty of bot detection has thus become an ongoing arms race: increased efforts in bot detection lead to the development of increasingly sophisticated bots~\cite{cresci2020decade}, and model performance can degrade rapidly when applied to newer data due to bots' ever-changing behavioral signals. 
+
+Hence, it is not guaranteed that high performance on a single benchmark implies strong temporal generalization. The recent availability of more comprehensive datasets, along with advancements in detection methods, has addressed the problem to some extent. The Botometer, a bot-detection tool, demonstrates the continued potential of supervised learning on comprehensive feature sets including profile, temporal, network, and content features~\cite{yang2022botometer}. Benchmark datasets like TwiBot-20 and TwiBot-22 have also contributed significantly by providing large-scale, diverse, and more realistic data for evaluating bot-detection models, while revealing that existing state-of-the-art models perform poorly on this harder data~\cite{feng2021twibot20, feng2022twibot22}. Although considerable progress has been made in constructing bot detectors and datasets, a deeper investigation into how supervised models transfer to other temporally distinct datasets has remained relatively underexplored. This paper attempts to bridge this gap by comparing the performance of multiple commonly used supervised methods across datasets spanning 2015 to 2022. Using features related to users' accounts and behaviors, we test how well these detectors transfer across time and examine the effects of bot evolution on prediction accuracy and feature relevance on benchmark datasets, including Cresci-2015, Cresci-2017, TwiBot-20, and TwiBot-22. We specifically evaluate feature transferability between these datasets to identify features that remain robust and relevant even as social bots continue to evolve.
 
 %-------------------------------------------------------------------------------
 \section{Related Work}\label{sec:related}
 %-------------------------------------------------------------------------------
-% TODO: organize by theme — (a) bot detection surveys, (b) benchmark
-% datasets, (c) feature- and graph-based detection methods, (d) studies
-% of real-world bot impact. The grouped \cite calls below are stubs that
-% keep the bibliography populated until the prose is written; replace
-% them with proper in-text references.
-Foundational surveys frame the bot-detection
-problem~\cite{ferrara2016rise,cresci2020decade,alazawi2022feature}.
-Benchmark datasets define the empirical
-landscape~\cite{cresci2017paradigm,feng2021twibot20,feng2022twibot22}.
-Behavioural-feature and tool-based detection
-methods~\cite{yang2019arming,yang2022botometer} establish the
-single-dataset baseline this work builds on. Studies of real-world bot
-activity in political events motivate the cross-era
-question~\cite{bessi2016distort,ferrara2017french,shao2018spread}.
+There has been a lot of recent research focused on detecting social bots in several related areas. These studies have focused on the influence of bots, their behavior, methods of detection, and benchmark datasets. This research highlights the difficulty in addressing reliability issues over time.
 
-%-------------------------------------------------------------------------------
-\section{Datasets}\label{sec:datasets}
-%-------------------------------------------------------------------------------
-% TODO: per-dataset table (rows = datasets, cols = users, tweets, bot rate,
-% collection year). Discuss feature availability differences (twibot_2020
-% has no in_reply_to_user_id, cresci_2017 has no follow graph, etc.) and
-% how the canonical schema handles them.
-\textit{Dataset descriptions go here.}
+One significant area of research focuses on how bots impact public discussions and information systems. Ferrara et al.~\cite{ferrara2016rise} identified that social bots are a major challenge for social media platforms because they have become more sophisticated and can imitate human behavior on a large scale. Subsequent studies have shown that bot activity can significantly influence real-world communication. One example of this is Bessi and Ferrara~\cite{bessi2016distort}, who found that bots played a major role in promoting partisan political content during the 2016 U.S. presidential election. Similarly, Ferrara~\cite{ferrara2017french} observed that bots were used to run disinformation campaigns that were aimed at swaying public attention and engagement in the 2017 French presidential election. From a broader perspective, Shao et al.~\cite{shao2018spread} found that bots tend to promote low-credibility information, especially in the early stages of spreading. This research is important because it underscores the need for bot detection. Social bots are not just automated accounts, as they also actively spread and promote misleading and manipulative content.
 
-%-------------------------------------------------------------------------------
-\section{Feature Engineering}\label{sec:fe}
-%-------------------------------------------------------------------------------
-% TODO: account features, tweet behavioural features, graph features,
-% per-day rates, NaN-vs-0 semantics, the cross-era feature contract.
-\textit{Feature engineering pipeline goes here.}
+A second significant area of research focuses on how bots behave differently over time and the challenges that these evolutions pose for detection. Cresci et al.~\cite{cresci2017paradigm} argue that newer social bots are now designed to mimic real users, enabling them to shift away from easier-to-detect forms of automation and, overall, make it harder for both people and detection systems to identify automated social bots. Cresci~\cite{cresci2020decade} further explains that, due to advances in detection methods, social bots have become more adept at avoiding detection. It is literature like this that matters for our work, because it shows that we should not judge bot detection systems based on a single dataset or timeframe. Instead, we must determine whether models trained on one generation of bot behavior remain effective for more complex forms of automation, and how we can address those shortcomings.
+
+A third significant area of research focuses on developing bot-detection tools and benchmark datasets. For example, Yang et al.~\cite{yang2022botometer} introduce Botometer as a practical system widely used to assess the likelihood that a social media account is automated. Botometer demonstrates the ongoing value of supervised machine learning by leveraging detailed features such as profile characteristics, activity over time, network patterns, and content signals. On the other hand, benchmark datasets such as TwiBot-20 and TwiBot-22 have been created to enable bot-detection systems to improve in scale, variety, and realism~\cite{feng2021twibot20, feng2022twibot22}. By going beyond the limited information in earlier benchmark datasets, the TwiBot datasets represent a significant advancement in the field of social bot detection. Simultaneously, the TwiBot studies show that earlier detection systems are less effective in detecting social bots when trained and tested on larger, more complex datasets. These studies highlight the need for our field of social bot detection to more thoroughly evaluate new methods for effectiveness rather than relying on a single benchmark.
+
+Our work builds directly on these contributions. Earlier studies have established the social importance of bot detection, documented the growing sophistication of automated accounts, and developed improved tools and datasets for evaluating detection models. Instead of proposing an entirely new detection framework, our study focuses on a narrower but significant question that has been less explored: how well standard supervised models generalize across datasets collected in different years. To investigate this, we compare various different models on Cresci-2015, Cresci-2017, TwiBot-20, and TwiBot-22 using account-level profile and behavioral features. In this way, our work complements prior research by evaluating the temporal reliability of commonly used modeling approaches and examining whether the features used to differentiate bots from humans remain consistent as bot behavior evolves.
 
 %-------------------------------------------------------------------------------
 \section{Methodology}\label{sec:method}
 %-------------------------------------------------------------------------------
-% TODO: pairwise (train, test) experimental setup, the six classifier
-% families, train/test split convention (full set off-diagonal,
-% stratified 80/20 on the diagonal), the per-pair feature schema.
-\textit{Methodology goes here.}
+This study evaluates the performance of several machine learning models to detect social media bots on twitter across datasets from 4 different time periods. Pairwise experiments were conducted using one dataset as a train dataset and another as a test dataset. These cross dataset experiments allowed for analysis of machine learning models accuracy and generalization over time.
 
 %-------------------------------------------------------------------------------
-\section{Experiments and Results}\label{sec:results}
+\subsection{Datasets}\label{sec:datasets}
 %-------------------------------------------------------------------------------
-% TODO: AUC matrices per model, the bots-over-time headline plot,
-% feature importance shifts. Reference figures by \ref{...} so the
-% numbering stays consistent if figures are reordered.
-\textit{Results discussion goes here.}
+This paper employs the use of 4 state of the art datasets: Cresci-15, Cresci-17, Twibot-2020, and Twibot-2022. Cresci-15 is a human annotated dataset of accounts collected in 2015. Cresci-17 was annotated by CrowdFlower workers. Both Cresci datasets separate accounts into many categories. There are general users, 4 different types of traditional spam bots, 3 different types of social spam bots, and fake followers. For the purpose of this paper in identifying social media bots as a whole, this paper groups all categories outside of genuine users as bots. Twibot 2020 data is crowd sourced data in which annotators must pass a screening test with $80\%$ accuracy and afterwards each account in the dataset is labeled by a majority vote from 5 annotators. Twibot 2022 data is instead labeled by several bot detection models. These labels were determined by first having 1000 accounts labeled by social media bot experts, and then training several state of the art models on these accounts. These models were then used to label the remaining data with majority voting. Table~\ref{tab:dataset-stats} summarizes the per-dataset account and tweet counts derived from our exploratory data analysis.
 
-% --- Example: linking a figure from report/figures/ -----------------------
-% Because the preamble sets \graphicspath{{../figures/}}, we reference the
-% figure by bare filename (no path, no extension required if the file is
-% PNG/PDF/JPG). Cross-reference via \ref{fig:bots-over-time}.
+\begin{table}[H]
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Dataset & Users & Bots & Humans & Bot \% & Tweets \\
+    \midrule
+    Cresci-15  & 5{,}301        & 3{,}987    & 1{,}314    & 75.2 & 2{,}827{,}757  \\
+    Cresci-17  & 14{,}368       & 10{,}894   & 3{,}474    & 75.8 & 6{,}637{,}615  \\
+    TwiBot-20  & 11{,}826       & 6{,}589    & 5{,}237    & 55.7 & 1{,}999{,}788  \\
+    TwiBot-22  & 1{,}000{,}000  & 139{,}943  & 860{,}057  & 14.0 & 88{,}217{,}457 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Account and tweet counts per dataset, computed during EDA. Cresci-15 and Cresci-17 are bot-heavy, TwiBot-20 is roughly balanced, and TwiBot-22 mirrors the human-skewed distribution of Twitter at large.}
+  \label{tab:dataset-stats}
+\end{table}
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{01_eda__label_balance.png}
+  \caption{Bot vs.\ human class balance across the four datasets. The Cresci datasets are bot-skewed by construction, TwiBot-20 is roughly balanced, and TwiBot-22 reflects an organic Twitter sample.}
+  \label{fig:label-balance}
+\end{figure}
+
+An exploratory data analysis (EDA) was then conducted on these datasets to get a better understanding of the data distributions and the data itself. Because datasets collected different data and used different data collections methods, the EDA first examined what features each dataset included, which features did each dataset exclude or miss, and what were the percentage breakdown of each category and values in each field. It was found that datasets contained different percentages of these fields/values, as summarized in Figure~\ref{fig:feature-availability}. This could be attributed to either different data collection methods or differences in bot behavior over the years.
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=0.95\textwidth]{04_viz__dataset__feature_availability.png}
+  \caption{Feature availability across datasets. Each cell indicates whether a candidate feature is fully present, partial, or missing in a given dataset. Several account- and graph-level features cannot be computed for every dataset, which constrains the feature set used in cross-era experiments.}
+  \label{fig:feature-availability}
+\end{figure*}
+
+%-------------------------------------------------------------------------------
+\subsection{Feature Engineering}\label{sec:fe}
+%-------------------------------------------------------------------------------
+Based on the EDA, features were selected which might best detect differences in bot and human accounts. The first features included are core account features: account age, follower/friend ratio, profile completeness, tweet count, retweet ratio, hashtag/mention/URL averages, text length averages, save base feature dataset. The next set of features computed are based on graph data. For each dataset, a graph is constructed with friends/following creating edges between account nodes in the graph. Then a graph embedding is created, and features for the graph are calculated along with features for individual nodes in the graph. These features include degree, reciprocity, component, and neighbor data. Additionally, pagerank and ego features are created as well. Figure~\ref{fig:degree-dist} shows the resulting degree distributions vary substantially across datasets, motivating their inclusion as features. However, for some datasets which are either too large to compute or include missing data, these features can be excluded.
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=0.46\textwidth]{04_viz__graph__degree_distribution_cresci_2015.png}\hfill
+  \includegraphics[width=0.46\textwidth]{04_viz__graph__degree_distribution_cresci_2017.png}\\[0.6em]
+  \includegraphics[width=0.46\textwidth]{04_viz__graph__degree_distribution_twibot_2020.png}\hfill
+  \includegraphics[width=0.46\textwidth]{04_viz__graph__degree_distribution_twibot_2022.png}
+  \caption{Degree distributions of the friend/follow graphs derived from each dataset. Top row: Cresci-15 and Cresci-17. Bottom row: TwiBot-20 and TwiBot-22. The distributions differ in both shape and scale, suggesting that graph-derived features carry signal that varies across data collection eras.}
+  \label{fig:degree-dist}
+\end{figure*}
+
+\subsection{Experiments}\label{sec:experiments}
+After feature engineering, the models were trained. This paper selected the following supervised learning algorithms: \begin{itemize}
+    \item Logistic Regression
+    \item Ridge Regression
+    \item Lasso Regression
+    \item Random Forest
+    \item Linear Support Vector Machine (SVM)
+\end{itemize} 
+These models were selected to evaluate both linear and non-linear machine learning classification algorithms. 
+
+A cross dataset train and test framework was employed to measure the generalization over a temporal shift of each algorithm. In this framework, each model was trained on one dataset and tested on a different dataset. This was repeated until every model was trained and tested on every possible pairwise dataset combination. This allows for a measurement of performance and degradation across time and datasets. Figure~\ref{fig:pipeline} illustrates the framework.
+
+\begin{figure}[!t]
+  \centering
+  \begin{tikzpicture}[
+    font=\scriptsize,
+    node distance=3mm and 5mm,
+    box/.style={draw, rounded corners=2pt, minimum width=12mm, minimum height=5mm, align=center, inner sep=2pt},
+    train/.style={box, fill=blue!8},
+    test/.style={box, fill=orange!15},
+    result/.style={box, fill=green!10},
+    arr/.style={-latex, thick}
+  ]
+    \node[train] (d1) {Cresci-15};
+    \node[train, below=of d1] (d2) {Cresci-17};
+    \node[train, below=of d2] (d3) {TwiBot-20};
+    \node[train, below=of d3] (d4) {TwiBot-22};
+
+    \node[box, right=8mm of d2, yshift=-3mm] (model) {Train\\model $M$};
+
+    \node[test, right=8mm of model, yshift=8mm] (t1) {Test on $D_j$};
+    \node[test, right=8mm of model, yshift=-8mm] (t2) {(all $j \neq i$)};
+
+    \node[result, right=6mm of t1, yshift=-8mm] (auc) {AUC$_{i \to j}$};
+
+    \draw[arr] (d1.east) -- (model.west);
+    \draw[arr] (d2.east) -- (model.west);
+    \draw[arr] (d3.east) -- (model.west);
+    \draw[arr] (d4.east) -- (model.west);
+    \draw[arr] (model.east) -- (t1.west);
+    \draw[arr] (model.east) -- (t2.west);
+    \draw[arr] (t1.east) -- (auc.west);
+    \draw[arr] (t2.east) -- (auc.west);
+  \end{tikzpicture}
+  \caption{Cross-era train/test framework. For each training dataset $D_i \in \{$Cresci-15, Cresci-17, TwiBot-20, TwiBot-22$\}$, a model $M$ is fit and evaluated on every other dataset $D_j$. Repeating this over all six models yields a $4{\times}4$ AUC matrix per model.}
+  \label{fig:pipeline}
+\end{figure}
+
+Finally model performance was evaluated by Area Under the Receiver Operating Characteristic Curve (AUC). This measures how well a model is able to separate positive and negative classes. AUC scores are generated for each model along with their degradation across different datasets. This provides an understanding of how models perform across different time periods and time. 
+
+%-------------------------------------------------------------------------------
+\section{Results}\label{sec:results}
+%-------------------------------------------------------------------------------
+After training all of the models and running them on the different datasets, we get the AUC heatmap shown in Figure~\ref{fig:auc-compare}. This heatmap shows the AUC score for each model across all pairwise train-test combinations, where each row is labeled as the training dataset followed by the testing dataset (e.g., "2015→2022" indicates a model trained on Cresci-2015 and tested on TwiBot-2022), and each column corresponds to a model type. We see consistently high scores for models trained and tested on the same dataset, which is to be expected. The remaining cross-era pairs show more mixed results: pairs such as 2015→2020, 2020→2017, 2022→2017, and 2022→2020 achieve relatively higher scores, while the rest score considerably lower, indicating poor performance. Interestingly, while the linear models — logistic regression, ridge, lasso, and SVM — perform largely uniformly across all train-test pairs, the tree-based models, random forest and XGBoost, exhibit a notably different pattern, scoring considerably lower than their linear counterparts in some pairs while outperforming them in others. Although we can identify the best performing model types for each individual pair (shown in Figure~\ref{fig:best-models}), the uniformity of performance between the linear and tree-based models makes this metric slightly misleading. It is perhaps more accurate to characterize the difference as a binary distinction between the two families, where the choice of model family matters more than the choice of a specific model. The individual per-model AUC matrices (Appendix~\ref{appendix:auc-heatmaps}) 
+further support this distinction.
+
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\columnwidth]{04_viz__story__bots_over_time_logreg}
+  \includegraphics[width=\columnwidth]{04_viz__compare__auc_by_model_and_pair.png}
   \caption{%
-    Cross-era AUC for a logistic-regression bot detector. Each line is
-    one training dataset; the x-axis is the test dataset in chronological
-    order. \textit{TODO: rewrite caption with real numbers once results
-    are final.}%
+    Cross-era AUC Comparison Across Models 
   }
-  \label{fig:bots-over-time}
+  \label{fig:auc-compare}
 \end{figure}
-% Use \ref{fig:bots-over-time} in body prose (e.g. ``see
-% Figure~\ref{fig:bots-over-time}''). For a full-page-width figure that
-% spans both columns, use \begin{figure*}...\end{figure*} instead.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{04_viz__compare__best_model_per_pair.png}
+  \caption{%
+    Best Model per Pair (by AUC) 
+  }
+  \label{fig:best-models}
+\end{figure}
+
+Despite this difference in model type, Figure~\ref{fig:compare-models} shows that the mean cross-era scores were very similar for the different types. The range between XGBoost (which scored the highest on average) and lasso (which scored the lowest on average) is less than $0.1$, which is negligible. Additionally, none of these mean scores exceed an AUC of $0.6$, which further indicates poor cross-era performance.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{04_viz__compare__mean_auc_by_model.png}
+  \caption{%
+    Mean Cross-Era AUC by Model
+  }
+  \label{fig:compare-models}
+\end{figure}
+
+We can additionally look at how these models performed over time. Given our previous findings, to see overall trends we only need to look at a single result from each model family. Figure~\ref{fig:bots-over-time} shows this data for logistic regression and random forest respectively. Additional data from the other model types can be found in the GitHub repository linked in Appendix~\ref{appendix:repo}.
 
 %-------------------------------------------------------------------------------
 \section{Discussion}\label{sec:discussion}
 %-------------------------------------------------------------------------------
-% TODO: what do the cross-era trends actually mean for bot evolution?
-% Where does the model fail (which (train, test) pairs degrade most)?
-% What do the feature-importance shifts say about how bots changed?
-\textit{Discussion goes here.}
+Our results highlight three findings about cross-era generalization in supervised bot detection. First, every model achieves near-perfect AUC on its own dataset but degrades substantially when tested on a different one. Logistic regression, for example, scores 0.9955 in-distribution on Cresci-2015 but drops to 0.5390 (barely above random) when transferred to a different dataset. The same pattern holds across all the other models tested, indicating that the issue is not model specific.
+
+Second, the choice of model family matters more than the choice of an algorithm within that family. The four linear models behave nearly uniformly across all train-test pairs, while the two tree-based models (random forest and XGBoost) follow a distinctly different pattern, sometimes outperforming the linear family and sometimes lagging behind it. Despite these differences in pattern, the mean cross-era AUC for every model falls within a narrow window below $0.6$, which suggests none of them can meaningfully generalize these features.
+
+Third, the effect of time on these models is not consistent. While models trained on older data sometimes perform worse on newer datasets, this is not always the case. Sometimes, models trained on newer data perform worse on older datasets instead. This suggests that performance differences are not driven by bot evolution alone. Other factors such as how datasets are labeled, differences in class balance (Table~\ref{tab:dataset-stats}), and variations in available features also play a significant role. Overall, these results show that models trained on a single dataset do not reliably generalize across different time periods or data sources.
 
 %-------------------------------------------------------------------------------
 \section{Limitations}\label{sec:limitations}
 %-------------------------------------------------------------------------------
-% TODO: dataset-comparability caveats (label semantics across cresci/
-% twibot, scale shift in raw counts, graph-construction differences),
-% the modern-data-collection gap (post-2022 X API restrictions).
-\textit{Limitations go here.}
+Each of the models struggled to accurately detect bots on datasets that differed from the one used to train the model. For instance, the AUC values for Logistic Regression on the Cresci 2015 dataset scored highly confident, a $99.55\%$ when cross compared with itself. However, when trained using the same data set, the score dropped to $53.90\%$. A similar trend was present within the Ridge, Lasso, Random Forest, Linear SVM, and XGBoost. This trend could likely be explained by three key factors: our data was homogeneous, the features selected were not distinctive, and bots across Twitter/X have altered their functionality over the course of a few years. 
 
 %-------------------------------------------------------------------------------
 \section{Conclusion}\label{sec:conclusion}
 %-------------------------------------------------------------------------------
-% TODO: 1-paragraph summary + future work pointer.
-\textit{Conclusion goes here.}
+This paper evaluated six commonly used supervised classifiers: logistic regression, ridge regression, lasso regression, random forest, linear SVM, and XGBoost. The models were used for cross-era Twitter bot detection across four benchmark datasets spanning 2015 to 2022. Trained and tested in a pairwise framework on a shared set of profile, content, and graph-derived features, every model achieved high in-distribution AUC but failed to generalize across datasets, with mean cross-era AUC for all models falling below $0.6$. The choice of model family produced visibly different transfer patterns, but no individual algorithm was very successful. These results suggest that high single-benchmark accuracy isn’t indicative of real-world reliability. Bot behavior, dataset construction, and feature distributions all shift over time, and detection systems built on static training data drift quickly out of date. 
+
+\section{Future Work}\label{sec:future}
+%-------------------------------------------------------------------------------
+There is more research that needs to be done about the development and progression of bots over time. However, due to payment restrictions, it is difficult to obtain large datasets can be used to train various models for bot prediction. For future use, more varied datasets that correspond to each year spanning for at year the last five years would likely yield must better results. In addition, distinguishing between different types of bots, i.e., spam bots, or social bots would also allow us to identify further gaps within our research.
+
+Similar research has been conducted on this matter. An investigation conducted by Sheetal and Kaur~\cite{sheetal2025comprehensive} split bots into various categories such as spam bots, social bots, sybils, and cyborgs, but showcased additional dataset limitations. Another investigation conducted by Davoudi et al.~\cite{davoudi2020health} scored models based on additional features such as mean post length, tweet diversity, user name, and profile photo. Future research with access to more data could investigate different types of models as well as using a wider range of available features.
 
 %-------------------------------------------------------------------------------
 \bibliographystyle{plain}
 \bibliography{\jobname}
+
+\clearpage
+\onecolumn
+\appendix
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+
+\section{AUC over time}
+\label{appendix:bots-over-time}
+\setcounter{figure}{0}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.47\textwidth]{04_viz__story__bots_over_time_logreg.png}\hfill
+  \includegraphics[width=0.47\textwidth]{04_viz__story__bots_over_time_rf.png}\\[0.8em]
+  \includegraphics[width=0.47\textwidth]{04_viz__story__bots_over_time_ridge.png}\hfill
+  \includegraphics[width=0.47\textwidth]{04_viz__story__bots_over_time_lasso.png}\\[0.8em]
+  \includegraphics[width=0.47\textwidth]{04_viz__story__bots_over_time_xgb.png}\hfill
+  \includegraphics[width=0.47\textwidth]{04_viz__story__bots_over_time_svm.png}
+  \caption{%
+    AUC over time for each model. Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically. Top row: logistic regression and random forest. Middle row: ridge and lasso. Bottom row: XGBoost and linear SVM.
+  }
+  \label{fig:bots-over-time}
+\end{figure}
+\FloatBarrier
+
+\section{Per-Model AUC Heatmaps}
+\label{appendix:auc-heatmaps}
+\setcounter{figure}{0}
+
+Figures~\ref{fig:tree-auc} and~\ref{fig:linear-auc} show the full AUC matrices for each individual model type within the two model families.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{tree-auc.png}
+  \caption{AUC matrices for tree-based models.}
+  \label{fig:tree-auc}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Linear-AUC.png}
+  \caption{AUC matrices for linear models.}
+  \label{fig:linear-auc}
+\end{figure}
+
+\section{GitHub Repository}
+\label{appendix:repo}
+\setcounter{figure}{0}
+
+The following repository contains all the code used for this project, as well as additional figures and data that were generated but not included in this report. None of the Cresci or TwiBot datasets are stored in this repository.
+
+GitHub Link: \url{https://github.com/AhteshamAlvi/Twibot_Detection_Research}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
