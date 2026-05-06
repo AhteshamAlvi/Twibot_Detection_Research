@@ -1,16 +1,5 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
-\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldnewlabel\newlabel
-\gdef\newlabel#1#2{\newlabelxx{#1}#2}
-\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
-\AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\newlabel\oldnewlabel
-\fi}
-\fi}
-\global\let\hyper@last\relax 
-\gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{ferrara2016rise}
@@ -37,36 +26,41 @@
 \newlabel{sec:method}{{3}{3}{Methodology}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Datasets}{3}{subsection.3.1}\protected@file@percent }
 \newlabel{sec:datasets}{{3.1}{3}{Datasets}{subsection.3.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Account and tweet counts per dataset, computed during EDA. Cresci-15 and Cresci-17 are bot-heavy, TwiBot-20 is roughly balanced, and TwiBot-22 mirrors the human-skewed distribution of Twitter at large.}}{3}{table.1}\protected@file@percent }
-\newlabel{tab:dataset-stats}{{1}{3}{Account and tweet counts per dataset, computed during EDA. Cresci-15 and Cresci-17 are bot-heavy, TwiBot-20 is roughly balanced, and TwiBot-22 mirrors the human-skewed distribution of Twitter at large}{table.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Bot vs.\ human class balance across the four datasets. The Cresci datasets are bot-skewed by construction, TwiBot-20 is roughly balanced, and TwiBot-22 reflects an organic Twitter sample.}}{3}{figure.1}\protected@file@percent }
-\newlabel{fig:label-balance}{{1}{3}{Bot vs.\ human class balance across the four datasets. The Cresci datasets are bot-skewed by construction, TwiBot-20 is roughly balanced, and TwiBot-22 reflects an organic Twitter sample}{figure.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Account and tweet counts per dataset, computed during EDA. Cresci-15 and Cresci-17 are bot-heavy, TwiBot-20 is roughly balanced, and TwiBot-22 mirrors the human-skewed distribution of Twitter at large.}}{3}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:dataset-stats}{{1}{3}{Account and tweet counts per dataset, computed during EDA. Cresci-15 and Cresci-17 are bot-heavy, TwiBot-20 is roughly balanced, and TwiBot-22 mirrors the human-skewed distribution of Twitter at large}{table.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Bot vs.\ human class balance across the four datasets. The Cresci datasets are bot-skewed by construction, TwiBot-20 is roughly balanced, and TwiBot-22 reflects an organic Twitter sample.}}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:label-balance}{{1}{3}{Bot vs.\ human class balance across the four datasets. The Cresci datasets are bot-skewed by construction, TwiBot-20 is roughly balanced, and TwiBot-22 reflects an organic Twitter sample}{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Feature availability across datasets. Each cell indicates whether a candidate feature is fully present, partial, or missing in a given dataset. Several account- and graph-level features cannot be computed for every dataset, which constrains the feature set used in cross-era experiments.}}{3}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:feature-availability}{{2}{3}{Feature availability across datasets. Each cell indicates whether a candidate feature is fully present, partial, or missing in a given dataset. Several account- and graph-level features cannot be computed for every dataset, which constrains the feature set used in cross-era experiments}{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Feature Engineering}{3}{subsection.3.2}\protected@file@percent }
 \newlabel{sec:fe}{{3.2}{3}{Feature Engineering}{subsection.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Experiments}{3}{subsection.3.3}\protected@file@percent }
-\newlabel{sec:experiments}{{3.3}{3}{Experiments}{subsection.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Feature availability across datasets. Each cell indicates whether a candidate feature is fully present, partial, or missing in a given dataset. Several account- and graph-level features cannot be computed for every dataset, which constrains the feature set used in cross-era experiments.}}{4}{figure.2}\protected@file@percent }
-\newlabel{fig:feature-availability}{{2}{4}{Feature availability across datasets. Each cell indicates whether a candidate feature is fully present, partial, or missing in a given dataset. Several account- and graph-level features cannot be computed for every dataset, which constrains the feature set used in cross-era experiments}{figure.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}{section.4}\protected@file@percent }
-\newlabel{sec:results}{{4}{4}{Results}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Degree distributions of the friend/follow graphs derived from each dataset. Top row: Cresci-15 and Cresci-17. Bottom row: TwiBot-20 and TwiBot-22. The distributions differ in both shape and scale, suggesting that graph-derived features carry signal that varies across data collection eras.}}{5}{figure.3}\protected@file@percent }
-\newlabel{fig:degree-dist}{{3}{5}{Degree distributions of the friend/follow graphs derived from each dataset. Top row: Cresci-15 and Cresci-17. Bottom row: TwiBot-20 and TwiBot-22. The distributions differ in both shape and scale, suggesting that graph-derived features carry signal that varies across data collection eras}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cross-era train/test framework. For each training dataset $D_i \in \{$Cresci-15, Cresci-17, TwiBot-20, TwiBot-22$\}$, a model $M$ is fit and evaluated on every other dataset $D_j$. Repeating this over all six models yields a $4{\times }4$ AUC matrix per model.}}{5}{figure.4}\protected@file@percent }
-\newlabel{fig:pipeline}{{4}{5}{Cross-era train/test framework. For each training dataset $D_i \in \{$Cresci-15, Cresci-17, TwiBot-20, TwiBot-22$\}$, a model $M$ is fit and evaluated on every other dataset $D_j$. Repeating this over all six models yields a $4{\times }4$ AUC matrix per model}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Degree distributions of the friend/follow graphs derived from each Cresci dataset.}}{4}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:degree-dist-cresci}{{3}{4}{Degree distributions of the friend/follow graphs derived from each Cresci dataset}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Experiments}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:experiments}{{3.3}{4}{Experiments}{subsection.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Degree distributions of the friend/follow graphs derived from each Twibot dataset.}}{4}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:degree-dist-twibot}{{4}{4}{Degree distributions of the friend/follow graphs derived from each Twibot dataset}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cross-era train/test framework. For each training dataset $D_i \in \{$Cresci-15, Cresci-17, TwiBot-20, TwiBot-22$\}$, a model $M$ is fit and evaluated on every other dataset $D_j$. Repeating this over all six models yields a $4{\times }4$ AUC matrix per model.}}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:pipeline}{{5}{4}{Cross-era train/test framework. For each training dataset $D_i \in \{$Cresci-15, Cresci-17, TwiBot-20, TwiBot-22$\}$, a model $M$ is fit and evaluated on every other dataset $D_j$. Repeating this over all six models yields a $4{\times }4$ AUC matrix per model}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{5}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{5}{Results}{section.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{5}{section.5}\protected@file@percent }
 \newlabel{sec:discussion}{{5}{5}{Discussion}{section.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cross-era AUC Comparison Across Models }}{6}{figure.5}\protected@file@percent }
-\newlabel{fig:auc-compare}{{5}{6}{Cross-era AUC Comparison Across Models}{figure.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Limitations}{6}{section.6}\protected@file@percent }
-\newlabel{sec:limitations}{{6}{6}{Limitations}{section.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Best Model per Pair (by AUC) }}{6}{figure.6}\protected@file@percent }
-\newlabel{fig:best-models}{{6}{6}{Best Model per Pair (by AUC)}{figure.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{6}{section.7}\protected@file@percent }
-\newlabel{sec:conclusion}{{7}{6}{Conclusion}{section.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{6}{section.8}\protected@file@percent }
-\newlabel{sec:future}{{8}{6}{Future Work}{section.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces AUC Comparison Across Models }}{5}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:auc-compare}{{6}{5}{AUC Comparison Across Models}{figure.caption.7}{}}
 \citation{sheetal2025comprehensive}
 \citation{davoudi2020health}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Best Model per Pair (by AUC) }}{6}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:best-models}{{7}{6}{Best Model per Pair (by AUC)}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Limitations}{6}{section.6}\protected@file@percent }
+\newlabel{sec:limitations}{{6}{6}{Limitations}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{6}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{6}{Conclusion}{section.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces AUC over time for logistic regression (left) and random forest (right). Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically.}}{6}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:sample-bots-over-time}{{8}{6}{AUC over time for logistic regression (left) and random forest (right). Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{6}{section.8}\protected@file@percent }
+\newlabel{sec:future}{{8}{6}{Future Work}{section.8}{}}
 \bibstyle{plain}
 \bibdata{research_report}
 \bibcite{bessi2016distort}{1}
@@ -80,18 +74,20 @@
 \bibcite{shao2018spread}{9}
 \bibcite{sheetal2025comprehensive}{10}
 \bibcite{yang2022botometer}{11}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mean Cross-Era AUC by Model }}{7}{figure.7}\protected@file@percent }
-\newlabel{fig:compare-models}{{7}{7}{Mean Cross-Era AUC by Model}{figure.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}AUC over time}{8}{appendix.A}\protected@file@percent }
-\newlabel{appendix:bots-over-time}{{A}{8}{AUC over time}{appendix.A}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces AUC over time for each model. Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically. Top row: logistic regression and random forest. Middle row: ridge and lasso. Bottom row: XGBoost and linear SVM. }}{8}{figure.1}\protected@file@percent }
-\newlabel{fig:bots-over-time}{{A.1}{8}{AUC over time for each model. Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically. Top row: logistic regression and random forest. Middle row: ridge and lasso. Bottom row: XGBoost and linear SVM}{figure.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Per-Model AUC Heatmaps}{8}{appendix.B}\protected@file@percent }
-\newlabel{appendix:auc-heatmaps}{{B}{8}{Per-Model AUC Heatmaps}{appendix.B}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces AUC matrices for tree-based models.}}{9}{figure.1}\protected@file@percent }
-\newlabel{fig:tree-auc}{{B.1}{9}{AUC matrices for tree-based models}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces AUC matrices for linear models.}}{9}{figure.2}\protected@file@percent }
-\newlabel{fig:linear-auc}{{B.2}{9}{AUC matrices for linear models}{figure.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}GitHub Repository}{9}{appendix.C}\protected@file@percent }
-\newlabel{appendix:repo}{{C}{9}{GitHub Repository}{appendix.C}{}}
-\gdef \@abspage@last{9}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Mean Cross-era AUC by Model}{8}{appendix.A}\protected@file@percent }
+\newlabel{appendix:compare-models}{{A}{8}{Mean Cross-era AUC by Model}{appendix.A}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Mean Cross-Era AUC by Model }}{8}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:compare-models}{{A.1}{8}{Mean Cross-Era AUC by Model}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}AUC over time}{9}{appendix.B}\protected@file@percent }
+\newlabel{appendix:bots-over-time}{{B}{9}{AUC over time}{appendix.B}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces AUC over time for each model. Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically. Top row: logistic regression and random forest. Middle row: ridge and lasso. Bottom row: XGBoost and linear SVM. }}{9}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:bots-over-time}{{B.2}{9}{AUC over time for each model. Each line represents a training dataset; the x-axis shows the test dataset ordered chronologically. Top row: logistic regression and random forest. Middle row: ridge and lasso. Bottom row: XGBoost and linear SVM}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Per-Model AUC Heatmaps}{10}{appendix.C}\protected@file@percent }
+\newlabel{appendix:auc-heatmaps}{{C}{10}{Per-Model AUC Heatmaps}{appendix.C}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.3}{\ignorespaces AUC matrices for tree-based models.}}{10}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:tree-auc}{{C.3}{10}{AUC matrices for tree-based models}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.4}{\ignorespaces AUC matrices for linear models.}}{10}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:linear-auc}{{C.4}{10}{AUC matrices for linear models}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}GitHub Repository}{11}{appendix.D}\protected@file@percent }
+\newlabel{appendix:repo}{{D}{11}{GitHub Repository}{appendix.D}{}}
+\gdef \@abspage@last{11}
